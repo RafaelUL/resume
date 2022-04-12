@@ -8,7 +8,7 @@
 # Knit the HTML version
 rmarkdown::render("docs/cv.rmd",
                   params = list(pdf_mode = FALSE),
-                  output_file = "docs/cv.html")
+                  output_file = "cv.html")
 
 # Knit the PDF version to temporary html location
 tmp_html_cv_loc <- fs::file_temp(ext = ".html")
