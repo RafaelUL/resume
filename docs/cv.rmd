@@ -54,7 +54,7 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _rafaelul.github.io/resume/_")
+  cat("Veja esse cv online em _rafaelul.github.io/resume/_")
 } else {
   cat("[<i class='fas fa-download'></i> Fazer download PDF](https://rafaelul.github.io/resume/cv.pdf)")
 }
@@ -81,11 +81,11 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R packages [**pagedown**](https://github.com/rstudio/pagedown) and [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
+Feito com os pacotes do R [**pagedown**](https://github.com/rstudio/pagedown) e [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
 
-Source code available on <i class="fa fa-github"></i>  [GitHub](https://github.com/RafaelUL/resume).
+Código disponível no <i class="fa fa-github"></i>  [GitHub](https://github.com/RafaelUL/resume).
 
-Last updated on `r Sys.Date()`.
+Atualizado em `r Sys.Date()`.
 
 
 
