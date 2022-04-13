@@ -9,6 +9,7 @@
 rmarkdown::render("docs/cv.rmd",
                   params = list(pdf_mode = FALSE),
                   output_file = "cv.html")
+file.copy("docs/cv.html", "docs/index.html", overwrite = TRUE)
 
 # Knit the PDF version to temporary html location
 tmp_html_cv_loc <- fs::file_temp(ext = ".html")
