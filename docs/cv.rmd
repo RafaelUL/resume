@@ -45,20 +45,6 @@ if(params$pdf_mode) {
 Aside
 ================================================================================
 
-```{r}
-# Build interactive network of positions colored by section
-# and connected if they occurred in the same year
-datadrivencv::build_network_logo(CV$entries_data)
-```
-
-
-```{r}
-if(params$pdf_mode){
-  cat("Veja esse cv [online](https://rafaelul.github.io/resume/)")
-} else {
-  cat("[<i class='fas fa-download'></i> Fazer download PDF](https://rafaelul.github.io/resume/cv.pdf)")
-}
-```
 
 Contato {#contact}
 --------------------------------------------------------------------------------
@@ -81,12 +67,27 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
+```{r}
+if(params$pdf_mode){
+  cat("Veja esse cv [online](https://rafaelul.github.io/resume/).")
+} else {
+  cat("[<i class='fas fa-download'></i> Fazer download PDF](https://rafaelul.github.io/resume/cv.pdf).")
+}
+```
+
 Feito com os pacotes do R [**pagedown**](https://github.com/rstudio/pagedown) e [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
 
 Código disponível no <i class="fa fa-github"></i>  [GitHub](https://github.com/RafaelUL/resume).
 
-Atualizado em `r Sys.Date()`.
+```{r}
+updated_string = stringr::str_glue("Atualizado em {Sys.Date()}.")
 
+if(params$pdf_mode){
+  stringr::str_glue("{updated_string} A versão mais recente deste currículo está [disponível aqui](https://rafaelul.github.io/resume/cv.pdf).")
+} else {
+  cat(updated_string)
+}
+```
 
 
 Main
