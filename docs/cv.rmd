@@ -54,7 +54,7 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 ```{r}
 if(params$pdf_mode){
-  cat("Veja esse cv online em _rafaelul.github.io/resume/_")
+  cat("Veja esse cv [online](rafaelul.github.io/resume/)")
 } else {
   cat("[<i class='fas fa-download'></i> Fazer download PDF](https://rafaelul.github.io/resume/cv.pdf)")
 }
