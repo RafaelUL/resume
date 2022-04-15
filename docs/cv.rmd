@@ -58,9 +58,19 @@ CV %>% print_contact_info()
 Habilidades Técnicas {#skills}
 --------------------------------------------------------------------------------
 
-```{r}
-CV %>% print_skill_bars()
-```
+<i class="fab fa-python"></i> `Python`
+
+<i class="fab fa-r-project"></i> `R`
+
+<i class="fa fa-area-chart" aria-hidden="true"></i>
+ `tidyverse`
+ 
+ <i class="fa fa-area-chart" aria-hidden="true"></i>
+ `tidymodels`
+
+<i class="fas fa-code-branch"></i> `Git`
+
+<i class="fab fa-markdown"></i> `Markdown`
 
 
 
