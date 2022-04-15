@@ -70,7 +70,7 @@ Habilidades Técnicas {#skills}
 
 <i class="fas fa-code-branch"></i> `Git`
 
-<i class="fab fa-markdown"></i> `Markdown`
+<i class="fa-brands fa-markdown"></i> `Markdown`
 
 
 
