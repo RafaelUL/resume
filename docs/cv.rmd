@@ -7,7 +7,7 @@ params:
     value: true
 output:
   pagedown::html_resume:
-    css: ['dd_cv.css', 'resume']
+    css: ['dd_cv.css', 'custom.css', 'resume']
     self_contained: true
 ---
 
@@ -53,6 +53,7 @@ Contato {#contact}
 CV %>% print_contact_info()
 ```
 
+<div style="padding-bottom: 0.37in;"></div>
 
 
 Habilidades Técnicas {#skills}
@@ -132,12 +133,32 @@ Cursos Complementares {data-icon=laptop}
 CV %<>% print_section('courses')
 ```
 
-<!-- These breaks just force a new page so section doesnt get cut off -->
-<br>
-<br>
-<br>
+::: aside
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_links()
+if(params$pdf_mode){
+  cat("Veja esse cv [online](https://rafaelul.github.io/resume/).")
+} else {
+  cat("[<i class='fas fa-download'></i> Fazer download PDF](https://rafaelul.github.io/resume/cv.pdf).")
+}
 ```
+
+Feito com os pacotes do R [**pagedown**](https://github.com/rstudio/pagedown) e [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
+
+Código disponível no <i class="fa fa-github"></i>  [GitHub](https://github.com/RafaelUL/resume).
+
+```{r}
+updated_string = stringr::str_glue("Atualizado em {Sys.Date()}.")
+
+if(params$pdf_mode){
+  stringr::str_glue("{updated_string} A versão mais recente deste currículo está [disponível aqui](https://rafaelul.github.io/resume/cv.pdf).")
+} else {
+  cat(updated_string)
+}
+```
+
+:::
 

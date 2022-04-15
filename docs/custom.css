@@ -1,0 +1,31 @@
+:root {
+  --sidebar-background-color: #d6ebff;
+}
+
+[data-id="title"] h1,
+[data-id="main"] h2 {
+  color: #00498f;
+  font-weight: bold;
+}
+
+[data-id="main"] li {
+  text-align: justify;
+}
+
+[data-id="disclaimer"] {
+  text-align: left;
+}
+
+.aside {
+  padding: 0.33in var(--sidebar-horizontal-padding);
+}
+
+.aside ul {
+    padding-left: 0rem;
+}
+
+.fa-graduation-cap:before,
+.fa-suitcase:before,
+.fa-laptop:before {
+  color: #00498f;
+}
