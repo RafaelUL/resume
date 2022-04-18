@@ -163,9 +163,9 @@ if(params$pdf_mode){
 }
 ```
 
-Feito com os pacotes do R [**pagedown**](https://github.com/rstudio/pagedown) e [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
+Feito com os pacotes do R [pagedown](https://github.com/rstudio/pagedown) e [datadrivencv](https://github.com/nstrayer/datadrivencv).
 
-Código disponível no <i class="fa fa-github"></i>  [GitHub](https://github.com/RafaelUL/resume).
+Código disponível no `r fa("github")` [GitHub](https://github.com/RafaelUL/resume).
 
 ```{r}
 updated_string = stringr::str_glue("Atualizado em {Sys.Date()}.")
