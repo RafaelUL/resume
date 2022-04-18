@@ -5,7 +5,18 @@
 [data-id="title"] h1,
 [data-id="main"] h2 {
   color: #00498f;
-  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.aside h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.details h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 }
 
 [data-id="main"] li {
