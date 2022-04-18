@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 )
 
 library(magrittr) # For the pipe
+library(fontawesome)
 source("cv_printing_functions.r")
 
 # Read in all data and initialize a CV printer object
@@ -73,19 +74,21 @@ CV %>% print_contact_info()
 Habilidades Técnicas {#skills}
 --------------------------------------------------------------------------------
 
-<i class="fab fa-python"></i> `Python`
+`r fa("r-project")` `R`
 
-<i class="fab fa-r-project"></i> `R`
+`r fa("python")` `Python`
 
-<i class="fa fa-area-chart" aria-hidden="true"></i>
- `tidyverse`
+`r fa("chart-area")` `tidyverse`
  
- <i class="fa fa-area-chart" aria-hidden="true"></i>
- `tidymodels`
+`r fa("chart-area")` `tidymodels`
 
-<i class="fas fa-code-branch"></i> `Git`
+`r fa("chart-area")` `scikit-learn`
 
-<i class="fa-brands fa-markdown"></i> `Markdown`
+`r fa("code-branch")` `Git`
+
+`r fa("markdown")` `Markdown`
+
+`r fa("markdown")` `Rmarkdown`
 
 
 
