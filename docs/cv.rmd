@@ -74,15 +74,9 @@ CV %>% print_contact_info()
 Habilidades Técnicas {#skills}
 --------------------------------------------------------------------------------
 
-`r fa("r-project")` `R`
+`r fa("r-project")` `R (tidyverse, tidymodels, shiny)`
 
-`r fa("python")` `Python`
-
-`r fa("chart-area")` `tidyverse`
- 
-`r fa("chart-area")` `tidymodels`
-
-`r fa("chart-area")` `scikit-learn`
+`r fa("python")` `Python (pandas, dash plotly, sklearn)`
 
 `r fa("code-branch")` `Git`
 
