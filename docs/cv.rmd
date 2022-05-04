@@ -64,11 +64,13 @@ Aside
 Contato {#contact}
 --------------------------------------------------------------------------------
 
-```{r}
-CV %>% print_contact_info()
-```
+`r fa("envelope")` [rafaelulima@gmail.com](mailto:rafaelulima@gmail.com)
 
-<div style="padding-bottom: 0.37in;"></div>
+`r fa("github")` [GitHub](https://github.com/RafaelUL/resume)
+
+`r fa("linkedin")` [LinkedIn](https://linkedin.com/in/rafaelul)
+
+<div style="padding-bottom: 0.30in;"></div>
 
 
 Habilidades Técnicas {#skills}
@@ -99,7 +101,7 @@ if(params$pdf_mode){
 
 Feito com os pacotes do R [**pagedown**](https://github.com/rstudio/pagedown) e [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
 
-Código disponível no <i class="fa fa-github"></i>  [GitHub](https://github.com/RafaelUL/resume).
+Código disponível no `r fa("github")`  [GitHub](https://github.com/RafaelUL/resume).
 
 ```{r}
 updated_string = stringr::str_glue("Atualizado em {Sys.Date()}.")
@@ -137,7 +139,7 @@ CV %<>% print_section('professional_experience')
 
 
 
-Cursos Complementares {data-icon=laptop}
+Cursos Relevantes {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
