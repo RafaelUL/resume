@@ -80,11 +80,11 @@ Habilidades Técnicas {#skills}
 
 `r fa("python")` `Python (pandas, dash plotly, sklearn)`
 
+`r fa("database")` `SQL`
+
 `r fa("code-branch")` `Git`
 
-`r fa("markdown")` `Markdown`
-
-`r fa("markdown")` `Rmarkdown`
+`r fa("markdown")` `Markdown, Rmarkdown`
 
 
 
