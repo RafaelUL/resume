@@ -6,17 +6,24 @@
 # for the HTML and PDF rendering. This exercise is left to the reader.
 
 # Knit the HTML version
-rmarkdown::render("docs/cv.rmd",
-                  params = list(pdf_mode = FALSE),
-                  output_file = "cv.html")
-file.copy("docs/cv.html", "docs/index.html", overwrite = TRUE)
+library(stringr)
 
-# Knit the PDF version to temporary html location
-tmp_html_cv_loc <- fs::file_temp(ext = ".html")
-rmarkdown::render("docs/cv.rmd",
-                  params = list(pdf_mode = TRUE),
-                  output_file = tmp_html_cv_loc)
+render_cv <- function(lang) {
+  rmarkdown::render(str_glue("docs/cv_{lang}.rmd"),
+                    params = list(pdf_mode = FALSE),
+                    output_file = str_glue("cv_{lang}.html"))
+  file.copy(str_glue("docs/cv_{lang}.html"), str_glue("docs/index_{lang}.html"), overwrite = TRUE) 
+  
+  # Knit the PDF version to temporary html location
+  tmp_html_cv_loc <- fs::file_temp(ext = ".html")
+  rmarkdown::render(str_glue("docs/cv_{lang}.rmd"),
+                    params = list(pdf_mode = TRUE),
+                    output_file = tmp_html_cv_loc)
+  
+  # Convert to PDF using Pagedown
+  pagedown::chrome_print(input = tmp_html_cv_loc,
+                         output = str_glue("docs/cv_{lang}.pdf"))
+}
 
-# Convert to PDF using Pagedown
-pagedown::chrome_print(input = tmp_html_cv_loc,
-                       output = "docs/cv.pdf")
+render_cv("en")
+render_cv("pt")

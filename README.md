@@ -1,7 +1,7 @@
-# Currículo de Rafael Uchoa
+# Rafael Uchoa's résumé
 
-Esse currículo foi feito com R, RStudio, e os pacotes [**pagedown**](https://github.com/rstudio/pagedown) e [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
+This résumé was made with R, RStudio, and the packages [**pagedown**](https://github.com/rstudio/pagedown) and [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
 
 HTML: https://rafaelul.github.io/resume/
 
-PDF: https://rafaelul.github.io/resume/cv.pdf
+PDF: https://rafaelul.github.io/resume/cv_en.pdf

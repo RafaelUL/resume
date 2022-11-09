@@ -90,7 +90,7 @@ create_CV_object <-  function(data_location,
       timeline = dplyr::case_when(
         no_start  & no_end  ~ "N/A",
         no_start  & has_end ~ as.character(end),
-        has_start & no_end  ~ paste("Presente", "-", start),
+        has_start & no_end  ~ paste("Current", "-", start),
         TRUE                ~ paste(end, "-", start)
       )
     ) %>%

@@ -1,0 +1,184 @@
+---
+title: "Rafael Uchoa de Lima's CV"
+author: Rafael Uchoa de Lima
+date: "`r Sys.Date()`"
+params:
+  pdf_mode:
+    value: true
+output:
+  pagedown::html_resume:
+    css: ['dd_cv.css', 'custom.css', 'resume']
+    self_contained: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+library(magrittr) # For the pipe
+library(fontawesome)
+source("cv_printing_functions.r")
+
+# Read in all data and initialize a CV printer object
+CV <- create_CV_object(
+  data_location = "https://docs.google.com/spreadsheets/d/15cfamsUUlJDebm_VGFss17ewYXOxiN1F9f0uX9XklPg",  
+  pdf_mode = params$pdf_mode
+)
+
+```
+<!-- inicio academic icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<!-- final academic icons -->
+
+ 
+<!-- inicio font awesome -->
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+<!-- final font awesome -->
+
+<!-- inicio font Montserrat -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- final font Montserrat -->
+
+
+```{r}
+# When in pdf export mode the little dots are unaligned, so fix that with some conditional CSS.
+if(params$pdf_mode) {
+    cat("
+<style>
+:root{
+  --decorator-outer-offset-left: -6.5px;
+}
+</style>")
+}
+```
+
+
+Aside
+================================================================================
+
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+`r fa("envelope")` [rafaelulima@gmail.com](mailto:rafaelulima@gmail.com)
+
+`r fa("github")` [GitHub](https://github.com/RafaelUL/)
+
+`r fa("linkedin")` [LinkedIn](https://linkedin.com/in/rafaelul)
+
+<div style="padding-bottom: 0.30in;"></div>
+
+
+Technical Skills {#skills}
+--------------------------------------------------------------------------------
+
+`r fa("r-project")` `R (tidyverse, tidymodels, shiny)`
+
+`r fa("python")` `Python (pandas, dash plotly, sklearn)`
+
+`r fa("database")` `SQL`
+
+`r fa("code-branch")` `Git`
+
+`r fa("markdown")` `Markdown, Rmarkdown`
+
+
+Languages {#languages}
+--------------------------------------------------------------------------------
+
+**English**: Fluent  
+
+**Portuguese**: Fluent
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+```{r}
+if(params$pdf_mode){
+  cat("See this résumé [online](https://rafaelul.github.io/resume/index_en.html).")
+} else {
+  cat("[<i class='fas fa-download'></i> Download PDF](https://rafaelul.github.io/resume/cv_en.pdf).")
+}
+```
+
+Made with the R packages [**pagedown**](https://github.com/rstudio/pagedown) and [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
+
+Source code available on `r fa("github")`  [GitHub](https://github.com/RafaelUL/resume).
+
+```{r}
+updated_string = stringr::str_glue("Last updated on {Sys.Date()}.")
+
+if(params$pdf_mode){
+  stringr::str_glue("{updated_string} The most recent version of this résumé is [available here](https://rafaelul.github.io/resume/cv_en.pdf).")
+} else {
+  cat(updated_string)
+}
+```
+
+
+Main
+================================================================================
+
+Rafael Uchoa de Lima {#title}
+--------------------------------------------------------------------------------
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('education')
+```
+
+
+
+Professional Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('professional_experience')
+```
+
+
+
+Relevant Coursework {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+CV %<>% print_section('courses')
+```
+
+::: aside
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+```{r}
+if(params$pdf_mode){
+  cat("See this résumé [online](https://rafaelul.github.io/resume/index_en.html).")
+} else {
+  cat("[<i class='fas fa-download'></i> Download PDF](https://rafaelul.github.io/resume/cv_en.pdf).")
+}
+```
+
+Made with the R packages [**pagedown**](https://github.com/rstudio/pagedown) and [**datadrivencv**](https://github.com/nstrayer/datadrivencv).
+
+Source code available on `r fa("github")`  [GitHub](https://github.com/RafaelUL/resume).
+
+```{r}
+updated_string = stringr::str_glue("Last updated on {Sys.Date()}.")
+
+if(params$pdf_mode){
+  stringr::str_glue("{updated_string} The most recent version of this résumé is [available here](https://rafaelul.github.io/resume/cv_en.pdf).")
+} else {
+  cat(updated_string)
+}
+```
+
+:::
+
